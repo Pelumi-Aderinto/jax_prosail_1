@@ -6,8 +6,8 @@ from prosail import spectral_lib
 from .prospect_d import run_prospect
 from .FourSAIL import foursail
 
-def run_prosail(n, cab, car,  cbrown, cw, cm, cp, cbc, lai, lidfa, hspot,
-                tts, tto, psi, ant=0.0, alpha=40., prospect_version="PRO", 
+def run_prosail(n, cab, car,  cbrown, cw, cm, lai, lidfa, hspot,
+                tts, tto, psi, cp=0, cbc=0, ant=0.0, alpha=40., prospect_version="PRO", 
                 typelidf=2, lidfb=0., factor="SDR",
                 rsoil0=None, rsoil=None, psoil=None,
                 soil_spectrum1=None, soil_spectrum2=None):
