@@ -168,8 +168,12 @@ def prospect_d_jit(N, cab, car, cbrown, cw, cm, cp, cbc, ant,
     n_lambdas = lambdas.shape[0]
 
     # Sum of absorption coefficients
+    
+    # kall = (cab * kab + car * kcar + ant * kant
+    #         + cbrown * kbrown + cw * kw + cm * km + cp * kcp + cbc * kcbc) / N
+    
     kall = (cab * kab + car * kcar + ant * kant
-            + cbrown * kbrown + cw * kw + cm * km + cp * kcp + cbc * kcbc) / N
+        + cbrown * kbrown + cw * kw + cp * kcp + cbc * kcbc) / N
 
     # Transmittance due to absorption
     # "Case of zero absorption" handled via jnp.where
